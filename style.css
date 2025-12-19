@@ -7,10 +7,9 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #E87A5D;
   color: #404041;
-
 }
+
 
 /* ================= HERO SECTION ================= */
 .hero {
@@ -19,12 +18,17 @@ body {
   align-items: center;
   padding: 0 8%;
   gap: 60px;
+
+  background-color: #E87A5D; 
 }
 
 .hero-left {
-  flex: 1;
+  flex: 0.7;
   display: flex;
   justify-content: center;
+  background-color: #FCF6D9;
+  height: 100vh;
+  position: relative;
 }
 
 .hero-left img {
@@ -32,12 +36,18 @@ body {
   height: 320px;
   object-fit: cover;
   border-radius: 50%;
-  
+  position: relative;
+  top: 40px;     /* MOVE DOWN */
+  left: 80px;
 }
 
+.hero {
+  padding-left: 0;
+}
 
 .hero-right {
-  flex: 2;
+  flex: 2.3;
+  padding-left: 80px;
 }
 
 .hero-right h1 {
@@ -176,7 +186,9 @@ body {
 /* ================= SECTIONS ================= */
 .section {
   padding: 100px 8%;
+  background-color: #E87A5D;   
 }
+
 
 .section h2 {
   font-size: 36px;
