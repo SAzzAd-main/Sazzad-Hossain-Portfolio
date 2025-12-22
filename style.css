@@ -1,4 +1,4 @@
-/* RESET */
+/* RESET */ 
 * {
   margin: 0;
   padding: 0;
@@ -101,31 +101,98 @@ body {
 
 
 /* ================= SOCIAL ICONS ================= */
-.socials {
+/* ================= SOCIAL TOGGLE ================= */
+
+.socials-container {
   margin-top: 35px;
-  display: flex;
-  gap: 18px;
+  position: relative;
+  display: inline-block;
 }
 
+/* Main Social Button */
+.social-toggle {
+  padding: 12px 28px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+
+  background-color: #3B5BA5;
+  color: #ffffff;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 0 10px rgba(59, 91, 165, 0.6);
+  transition: all 0.3s ease;
+}
+.social-toggle:hover,
+.social-toggle:focus {
+  box-shadow:
+    0 0 10px #3B5BA5,
+    0 0 20px #3B5BA5,
+    0 0 40px #3B5BA5;
+  transform: scale(1.05);
+}
+
+/* When socials are open */
+.socials.active ~ .social-toggle,
+.social-toggle.active {
+  box-shadow:
+    0 0 15px #3B5BA5,
+    0 0 30px #3B5BA5,
+    0 0 60px #3B5BA5;
+}
+
+
+/* Hidden social icons */
+.socials {
+  position: absolute;
+  top: 0;
+  left: 70px;
+
+  display: flex;
+  gap: 15px;
+
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-20px);
+
+  transition: 0.3s ease;
+}
+
+/* When active (expanded) */
+.socials.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(0);
+}
+
+/* Individual social icons */
 .socials a {
   width: 45px;
   height: 45px;
   border-radius: 50%;
+
   background-color: #404041;
   color: #E1E5EB;
-  
+
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #e5e7eb;
+
   font-size: 18px;
-  transition: 0.3s ease;
+  transition: 0.3s;
 }
 
 .socials a:hover {
-  background-color: #404041;
-  color: #E1E5EB;
+  background-color: #3B5BA5;
+  color: #ffffff;
 }
+
 
 
 /* ================= RIGHT SIDE NAV ================= */
@@ -141,17 +208,25 @@ body {
 }
 
 .side-nav a {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+  width: 120px;          
+  height: 45px;         
+  border-radius: 30px;  
+
   background-color: #404041;
   color: #E1E5EB;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   text-decoration: none;
   position: relative;
   transition: 0.3s;
+}
+
+.side-nav a:hover {
+  background-color: #3B5BA5;
+  transform: translateX(-5px);
 }
 
 .side-nav a span {
@@ -219,4 +294,70 @@ body {
   .side-nav {
     display: none;
   }
+}
+
+/* CONTACT BUTTON */
+.contact-btn {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  padding: 12px 26px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+
+  background-color: #3B5BA5;
+  color: #ffffff;
+
+  font-weight: 600;
+  z-index: 2000;
+}
+
+/* MODAL BACKGROUND */
+.contact-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 3000;
+}
+
+/* FORM BOX */
+.contact-box {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  width: 320px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-box h2 {
+  color: #3B5BA5;
+  text-align: center;
+}
+
+/* INPUTS */
+.contact-box input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* SUBMIT BUTTON */
+.submit-btn {
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+
+  background-color: #3B5BA5;
+  color: #ffffff;
+  font-weight: 600;
 }
