@@ -1,24 +1,33 @@
-document.addEventListener('DOMContentLoaded', () => {
+const buttons = document.querySelectorAll('.nav-links button');
+const sections = document.querySelectorAll('section');
 
-  const toggleBtn = document.querySelector('.social-toggle');
-  const socials = document.querySelector('.socials');
+buttons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const targetId = btn.innerText.toLowerCase().replace(/\s+/g, '');
+    const target = document.getElementById(targetId);
 
-  toggleBtn.addEventListener('click', () => {
-    socials.classList.toggle('active');
-    toggleBtn.classList.toggle('active');
-  });
-
-  const contactBtn = document.querySelector('.contact-btn');
-  const modal = document.querySelector('.contact-modal');
-
-  contactBtn.addEventListener('click', () => {
-    modal.style.display = 'flex';
-  });
-
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      modal.style.display = 'none';
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
     }
   });
+});
 
+window.addEventListener('scroll', () => {
+  let scrollPos = window.scrollY + 150;
+
+  sections.forEach(section => {
+    if (
+      scrollPos >= section.offsetTop &&
+      scrollPos < section.offsetTop + section.offsetHeight
+    ) {
+      buttons.forEach(b => b.classList.remove('active'));
+
+      buttons.forEach(btn => {
+        const targetId = btn.innerText.toLowerCase().replace(/\s+/g, '');
+        if (targetId === section.id) {
+          btn.classList.add('active');
+        }
+      });
+    }
+  });
 });

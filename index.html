@@ -1,124 +1,228 @@
-                                                                                                                 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sazzad Hossain | Portfolio</title>
+  <meta charset="UTF-8">
+  <title>Sazzad Hossain</title>
+  <link rel="stylesheet" href="style.css">
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <!-- Font Awesome -->
+  <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  
-   <button class="contact-btn">Contact Me</button>
 
-  <!-- Right Side Navigation -->
-  <nav class="side-nav">
-    <a href="#home" class="active"><i class="fa fa-home"></i><span>Home</span></a>
-    <a href="#about"><i class="fa fa-user"></i><span>About</span></a>
-    <a href="#projects"><i class="fa fa-briefcase"></i><span>Projects</span></a>
-    <a href="#achievements"><i class="fa fa-trophy"></i><span>Achievements</span></a>
-    <a href="#publications"><i class="fa fa-book"></i><span>Publications</span></a>
-    
-  </nav>
+<!-- NAVIGATION -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-links">
+      <button data-target="home">Home</button>
+      <button data-target="about">About</button>
+      <button data-target="educations">Educations</button>
+      <button data-target="projects">Projects</button>
+      <button data-target="skills">Skills</button>
+      <button data-target="certifications">Certifications</button>
+      <button data-target="contacts">Contacts</button>
+    </div>
 
-  <!-- HERO SECTION -->
-  <section id="home" class="hero">
+    <div class="nav-socials">
+      <a href="https://www.facebook.com/sazzad.hossain.406439" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://github.com/SAzzAd-main" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.researchgate.net/profile/Sazzad-Ctg?ev=hdr_xprf" target="_blank"><i class="fab fa-researchgate"></i></a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="hero-inner">
+
     <div class="hero-left">
-      <img src="my_photo.jpeg" alt="My Photo" width="150">
+      <h2>HI, I'M SAZZAD</h2>
+      <h1>STUDENT of Computer Science & Engineering </h1>
+
+      <button class="hero-btn" id="resume-btn">
+          VIEW MY RESUME <i class="fa fa-download"></i>
+      </button>
+
+      <script>
+        document.getElementById("resume-btn").addEventListener("click", function() {
+         window.open("Resume of Sazzad Hossain.pdf", "_blank");
+    });
+</script>
 
     </div>
 
     <div class="hero-right">
-      <h1>Hi, It's me <span>SAZZAD HOSSAIN</span></h1>
-      <h2>Undergrad Student | AI Enthusiast | Problem Solver</h2>
+      <img src="my_photo5.png" alt="Profile">
+    </div>
 
-      <p>
-        Currently I'm studying B.Sc.(Engg.) in Computer Science &  Engineering<br />
-        at International Islamic University Chittagong, Chattogram, Bangladesh
-      </p>
-
-      <a href="Resume of Sazzad Hossain.pdf" target="_blank" class="btn" download>
-        Resume <i class="fa fa-download"></i>
-      </a>
-
-      <div class="socials-container">
-  <button class="social-toggle">
-  ✨ Socials
-  </button>
-
-
-  <div class="socials">
-    <a href="https://www.facebook.com/sazzad.hossain.406439" target="_blank">
-      <i class="fab fa-facebook"></i>
-    </a>
-
-    <a href="#"><i class="fab fa-linkedin"></i></a>
-
-    <a href="https://www.researchgate.net/profile/Sazzad-Ctg" target="_blank">
-      <i class="fab fa-researchgate"></i>
-    </a>
-
-    <a href="https://github.com/SAzzAd-main" target="_blank">
-      <i class="fab fa-github"></i>
-    </a>
-
-    <a href="#"><i class="fab fa-youtube"></i></a>
   </div>
-</div> 
+</section>
 
-  </section>
+<!-- ABOUT -->
+<section id="about" class="section">
+  <h2>About me</h2>
 
-  <!-- ABOUT -->
-  <section id="about" class="section">
-    <h2>About Me</h2>
-    <p>Solving real life problem is my passion</p>
-  </section>
+  <div class="about-box">
+    <p>
+      As a Computer Science and Engineering student and dedicated AI enthusiast,
+      I am a lifelong learner driven by the challenge of solving complex technical
+      problems through innovative technology. I thrive in collaborative team
+      environments, where I leverage my skills as a proactive problem solver to
+      tackle demanding projects and navigate intricate logic. I actively seek out
+      and embrace challenges that push my boundaries, combining a disciplined
+      academic foundation with a passion for exploring the evolving landscape of
+      artificial intelligence.
+    </p>
+  </div>
+</section>
 
-  <!-- PROJECTS -->
-  <section id="projects" class="section">
-    <h2>Projects</h2>
-    <p>Project details here.</p>
-  </section>
+<!-- EDUCATIONS -->
+<section id="educations" class="section">
+  <h2>Educations</h2>
 
-  <!-- ACHIEVEMENTS -->
-  <section id="achievements" class="section">
-    <h2>Achievements</h2>
-    <p>Achievements here.</p>
-  </section>
+  <div class="educations-grid">
+    <div class="education-box">
+      <h3>Bachelor's Degree
+</h3>
+      <p>BSc. Computer Science & Engineering<br>International Islamic Univarsity Chittagong(2024-2028)</p>
+    </div>
 
-  <!-- PUBLICATIONS -->
-  <section id="publications" class="section">
-    <h2>Publications</h2>
-    <p>Publications here.</p>
-  </section>
+    <div class="education-box">
+      <h3>Alim Certificate (Islamic Higher Secondary Level)</h3>
+      <p>Gpa 5.00<br>2021-2023<br>Baitush Sharf Adarsha Kamil Marasah.</p>
+    </div>
 
-  <!-- CONTACT -->
-  <section id="contact" class="section">
-    <h2>Contact</h2>
-    <p>Email, phone, or form.</p>
-  </section>
+    <div class="education-box">
+      <h3>Dakhil Certificate (Islamic Secondary Level)</h3>
+      <p>Gpa 5.00<br>2019-2021<br>Baitush Sharf Adarsha Kamil Marasah.</p>
+    </div>
+  </div>
+</section>
 
-  <!-- JS -->
-  <script src="script.js"></script>
 
-<div class="contact-modal">
-  <div class="contact-box">
-    <h2>Contact Me</h2>
+<!-- PROJECTS -->
+<section id="projects" class="section">
+  <h2>Projects</h2>
 
-    <input type="text" placeholder="Your Name" />
-    <input type="tel" placeholder="Phone Number" />
-    <input type="email" placeholder="Email Address" />
+  <div class="projects-grid">
+    <div class="project-box">
+      <h3>Proshroom, an AI-Integrated website for Future Food
+</h3>
+      <p>Shape the Future Challenge by Moonshot Pirates
+Research, Prototype, and a fully functional AI-Integrated platform designed for users.</p>
+    </div>
 
-    <button class="submit-btn">Send</button>
+    <div class="project-box">
+      <h3>Traffic Light Controller</h3>
+      <p>This traffic light controller uses a memory-based circuit built entirely from NAND gates to manage the light sequence. The D flip-flops act as storage units that remember the current color, while a network of logic gates calculates which light should turn on next. Each pulse of a clock signal pushes the system to the next step in the cycle, ensuring a smooth and repeatable transition from green to yellow to red.</p>
+    </div>
+
+    <div class="project-box">
+      <h3>Snake_Water_Game</h3>
+      <p>This Snake Water Gun project is a Python-based recreation of the classic hand game, similar to Rock Paper Scissors. Built primarily with the random module, the program enables a user to compete against a computer that makes unpredictable choices using pseudorandom generation.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- SKILLS -->
+<section id="skills" class="section">
+  <h2>Skills</h2>
+
+  <div class="skills-grid">
+  <div class="skills-box">
+    <h3>Frontend Development</h3>
+    <p>HTML, CSS, JavaScript</p>
+  </div>
+
+  <div class="skills-box">
+    <h3>Backend Development</h3>
+    <p>python,MongoDB</p>
+  </div>
+
+  <div class="skills-box">
+    <h3>Tools</h3>
+    <p>Git, GitHub, VS Code</p>
   </div>
 </div>
+
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications" class="section">
+  <h2>Certifications</h2>
+
+  <div class="cert-list">
+    <div class="cert-box">
+      <h3>Winner Certificate</h3>
+      <p> Semi-Final Round, ICT Olympiad Bangladesh S2</p>
+    </div>
+
+    <div class="cert-box">
+      <h3>Aspire Leaders Program</h3>
+      <p>Certified Participant</p>
+    </div>
+
+    <div class="cert-box">
+      <h3> CS Fundamentals</h3>
+      <p>Phitron(Fall 2024)</p>
+    </div>
+    
+    <div class="cert-box">
+      <h4> Full-Funded Scholarships </h4>
+      <p>SSC and HSC</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- CONTACT -->
+<section id="contacts" class="section">
+  <h2>Contact Me</h2>
+
+  <form id="contact-form" class="contact-form">
+    <input type="text" name="name" placeholder="YOUR NAME" required>
+    <input type="email" name="email" placeholder="YOUR EMAIL" required>
+    <input type="text" name="subject" placeholder="ENTER SUBJECT" required>
+    <textarea name="message" placeholder="Message Here..." required></textarea>
+
+    <button type="submit" class="submit-btn">
+  Submit
+  <span class="icon">📨</span>
+</button>
+
+
+  </form>
+</section>
+
+
+<script src="script.js"></script>
+
+<script>
+document.getElementById("contact-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const data = {
+    name: this.name.value,
+    email: this.email.value,
+    subject: this.subject.value,
+    message: this.message.value
+  };
+
+  fetch("https://script.google.com/macros/s/AKfycbxaTN_pa0pCgJcbvZrXRJM5mrqtZMsIYF6FKyxUy7FfiAzX9AsYK8Jz-9EtXgH32SRT/exec", {
+    method: "POST",
+    body: JSON.stringify(data)
+  })
+  .then(() => {
+    alert("Message sent!");
+    this.reset();
+  })
+  .catch(() => {
+    alert("Error! Try again.");
+  });
+});
+</script>
+
 
 </body>
 </html>
